@@ -1,0 +1,74 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
+.center{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.largest-ring{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    box-shadow: 4px 0 0 #262626;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: animate 1s linear infinite;
+}
+
+.larger-ring{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80px;
+    height: 80px;
+    box-shadow: -4px 0 0 #262626;
+    border-radius: 50%;
+}
+
+.large-ring{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 4px 0 #262626;
+    border-radius: 50%;
+}
+
+.small-ring{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg); ;
+    }
+    100%{
+        transform: translate(-50%, -50%)  rotate(360deg);;
+    }
+}
