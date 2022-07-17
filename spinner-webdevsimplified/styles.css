@@ -1,0 +1,70 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+.spinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    margin-block: 40px;
+    position: relative;
+    overflow: hidden;
+    animation: textcolor 2s ease-in-out infinite;
+    font-size: 2rem;
+}
+
+.spinner-sector{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 15px solid transparent;
+    mix-blend-mode: overlay;
+    animation: rotate var(--duration) var(--timing-function) infinite;
+    pointer-events: none;
+}
+
+.spinner-sector--red{
+    border-top: 15px solid lightcoral;
+    --duration: 1.5s;
+    --timing-function: ease-in-out;
+}
+
+.spinner-sector--blue{
+    border-left: 15px solid lightblue;
+    --duration: 2.0s;
+    --timing-function: ease-in;
+}
+
+.spinner-sector--green{
+    border-right: 15px solid lightgreen;
+    --duration: 2.5s;
+    --timing-function: ease-out;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes textcolor{
+    0%, 100%{
+        color: rgba(0, 0, 0, 1);
+    }
+
+    25%, 75%{
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    50%{
+        color: rgba(0, 0, 0, 0.1);
+    }
+}
