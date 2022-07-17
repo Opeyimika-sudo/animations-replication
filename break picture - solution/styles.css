@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    height: 100vh; 
+}
+
+section{
+    width: 400px;
+    height: 300px;
+    position: relative;
+}
+
+span{
+    position: absolute;
+    inset: 0;
+    background: url("https://picsum.photos/300");
+    background-size: cover;   
+    transition: 2s;
+}
+.one{
+    clip-path: polygon(0 0, 50% 0, 50% 50%, 0 50%);
+    background-color: blue;
+}
+
+.two{
+    clip-path: polygon(50% 0, 100% 0, 100% 50%, 50% 50%);
+    background-color: pink;
+}
+
+.three{
+    clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
+    background-color: brown;
+}
+
+.four{
+    clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+    background-color: gold;
+}
+
+section:hover .one{
+    transform: translate(-100px, -90px) rotateZ(-26deg);
+}
+section:hover .two{
+    transform: translate(50px, -110px) rotateZ(26deg);
+}
+section:hover .three{
+    transform: translate(-90px, 80px) rotateZ(15deg);
+}
+section:hover .four{
+    transform: translate(90px, 80px) rotateZ(-15deg);
+}
